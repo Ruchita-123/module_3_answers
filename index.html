@@ -5,88 +5,86 @@
   <title>Narrow Down Your Menu Choice</title>
  
   <link rel="stylesheet" href="bootstrap.min.css">
-  <script src="app.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
       integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
       crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     
-  
+    <script src="app.js"></script>
     <script>
       $(function() { $("input").focus(); })
     </script>
+          <style>
+            h1 {  padding: 5px 10px;
+              text-shadow: 2px 2px #8f8e8e;
+                margin-bottom: 20px;
+                font-size:40px;
+              }
+              input[type="text"] {
+                width: 200px;
+                float: left;
+              }
+              
+              .border{ background: rgb(255, 255, 255);
+                border: 1px solid black;
+                }
+              .bt {
+                background-color: rgb(35, 109, 247);
+                border: 1px black;
+                color: white;
+                padding: 5px 10px;
+                text-align: center;
+                
+             
+              box-shadow: 5px 10px #f1f1f1;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 13px;
+                text-shadow: 2px 2px #000000;
+                margin: 3px 1px;
+                cursor: pointer;
+              }
+              .button {
+                background-color: rgb(179, 39, 34);
+                border: none;
+                color: rgb(0, 0, 0);
+                padding: 2px 3px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 12px;
+               
+                margin: 3px 1px;
+                cursor: pointer;
+              }
+              
+              .shadow{
+                text-shadow: 2px 2px #8f8e8e;
+              }
+              
+              
+            
+            
+                  </style>
 </head>
 <body class="bsg">
   <div class="container">
     <header class="row">
       <div class="col-md-12">
-
-        <h1>Narrow Down Your Chinese Menu Choice</h1>
+        <h1 class="bs"><u><b>Narrow Down Your Chinese Menu Choice</b></u></h1>
 
         
       </div>
-      <style>
-h1 {  padding: 5px 10px;
-  text-shadow: 2px 2px #8f8e8e;
-    margin-bottom: 20px;
-    font-size:40px;
-  }
-  input[type="text"] {
-    width: 200px;
-    float: left;
-  }
-  
-  .border{ background: rgb(255, 255, 255);
-    border: 1px solid black;
-    }
-  .bt {
-    background-color: rgb(35, 109, 247);
-    border: 1px black;
-    color: white;
-    padding: 5px 10px;
-    text-align: center;
-    
- 
-  box-shadow: 5px 10px #f1f1f1;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 13px;
-    text-shadow: 2px 2px #000000;
-    margin: 3px 1px;
-    cursor: pointer;
-  }
-  .button {
-    background-color: rgb(179, 39, 34);
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 2px 3px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-   
-    margin: 3px 1px;
-    cursor: pointer;
-  }
-  
-  .shadow{
-    text-shadow: 2px 2px #8f8e8e;
-  }
-  
-  
-
-
-      </style>
     </header>
 
   
     <div class="row"  ng-controller="NarrowItDownController as search">
       <div class="col-md-4">
         <div>
-         
-          <div > 
-            <h2 class="shadow">Search menu</h2>
+          <h2>Search menu</h2>
+          <div class="bs">
             <input type="text" id="searchFor" ng-model="search.searchFor" class="form-control" placeholder="search term" />
           <button ng-click="search.search()" class="bt"><span>Narrow It Down For Me!</span></button>
           </div>
